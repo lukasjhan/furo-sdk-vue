@@ -7,9 +7,9 @@ const FURO_AUTH_URL = "https://auth.furo.one";
 export default class FuroClient {
   constructor(options) {
     this.domain = options.domain;
-    this.clientId = options.client_id;
-    this.redirectURI = options.redirect_uri;
-    if (options.api_url) axios.defaults.baseURL = options.api_url;
+    this.clientId = options.clientId;
+    this.redirectURI = options.redirectUri;
+    if (options.apiUrl) axios.defaults.baseURL = options.apiUrl;
   }
 
   async buildAuthorizeUrl() {

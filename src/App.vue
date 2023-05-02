@@ -1,6 +1,11 @@
 <template>
   <img id="logo" alt="Vue logo" src="./assets/furo.svg" />
-  <FuroProvider :clientId="'fdaskfjfasfsafafsfsf87s98f7sa9flsadf'">
+  <FuroProvider
+    :domain="`https://auth.furo.one`"
+    :clientId="clientId"
+    :redirectUri="origin + `/${clientId}`"
+    :apiUrl="`https://api.furo.one`"
+  >
     <TestPage />
   </FuroProvider>
 </template>
@@ -14,6 +19,12 @@ export default {
   components: {
     FuroProvider,
     TestPage,
+  },
+  setup() {
+    return {
+      clientId: "Set up your client ID in App.vue",
+      origin: window.location.origin,
+    };
   },
 };
 </script>

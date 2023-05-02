@@ -6,19 +6,19 @@
     :redirectUri="origin + `/${clientId}`"
     :apiUrl="`https://api.furo.one`"
   >
-    <TestPage />
+    <Board />
   </FuroProvider>
 </template>
 
 <script>
 import FuroProvider from "./components/FuroProvider.vue";
-import TestPage from "./components/TestPage.vue";
+import Board from "./components/Board.vue";
 
 export default {
   name: "App",
   components: {
     FuroProvider,
-    TestPage,
+    Board,
   },
   setup() {
     return {
